@@ -1,0 +1,50 @@
+body {
+    font-family: Roboto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+@media (min-width: 576px) and (max-width: 1200px) {
+    .container {
+        display: grid;
+        grid-gap: 3rem;
+
+        app-gauge {
+            transform: scale(2.5);
+            display: none;
+
+            &:first-of-type {
+                display: initial;
+            }
+        }
+
+        .hide {
+            display: none !important;
+        }
+        
+        .show {
+            display: initial !important;
+        }
+    }   
+
+    .swipe {
+        position: absolute;
+        transform: translateY(21vh);
+        font-size: 3rem;
+        opacity: .3;
+        font-style: italic;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        grid-gap: 3rem;
+    }
+    .swipe {
+        display: none;
+    }
+}

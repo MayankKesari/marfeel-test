@@ -1,0 +1,23 @@
+{
+  "name": "marfeel-javascript-project",
+  "version": "1.0.0",
+  "description": "Marfeel front-end JavaScript test",
+  "main": "index.js",
+  "devDependencies": {
+    "jasmine-core": "^3.3.0",
+    "node-sass": "^4.9.4"
+  },
+  "scripts": {
+    "scss": "node-sass src/styles/scss -watch -o src/styles/css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MayankKesari/marfeel-test.git"
+  },
+  "author": "Mayank Kesari",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MayankKesari/marfeel-test/issues"
+  },
+  "homepage": "https://github.com/MayankKesari/marfeel-test#readme"
+}

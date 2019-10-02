@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Marfeel JavaScript Test</title>
+        <link rel="stylesheet" type="text/css" href="src/styles/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+        <script src="https://d3js.org/d3.v5.min.js"></script>
+        <script src="https://unpkg.com/@webcomponents/webcomponentsjs@2.0.0/webcomponents-bundle.js"></script>
+        <script src="src/js/pure-swipe.min.js"></script>
+        <script src="src/js/main.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <app-gauge data="revenue"></app-gauge>
+            <app-gauge data="impressions"></app-gauge>
+            <app-gauge data="visits"></app-gauge>
+        </div>
+        <div class="swipe">(psst! you can -> swipe me)</div>
+        <script>
+            function slideLeft (event) {
+                event.target.classList = 'hide';
+                if (event.target.previousElementSibling == undefined) {
+                    document.querySelectorAll('app-gauge')[2].classList = 'show';
+                } else {
+                    event.target.previousElementSibling.classList = 'show';
+                }
+            }
+            function slideRight (event) {
+                event.target.classList = 'hide';
+                if (event.target.nextElementSibling == undefined) {
+                    document.querySelectorAll('app-gauge')[0].classList = 'show';
+                } else {
+                    event.target.nextElementSibling.classList = 'show';
+                }
+            }
+            document.querySelectorAll('app-gauge').forEach(function (el, i) {
+                document.querySelectorAll('app-gauge')[i].addEventListener('swiped-left', function(event) {
+                    slideLeft(event);
+                });
+                document.querySelectorAll('app-gauge')[i].addEventListener('swiped-right', function(event) {
+                    slideRight(event);
+                });
+            });
+        </script>
+    </body>
+</html>

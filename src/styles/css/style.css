@@ -1,0 +1,43 @@
+/* line 1, src/styles/scss/style.scss */
+body {
+  font-family: Roboto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh; }
+
+@media (min-width: 576px) and (max-width: 1200px) {
+  /* line 10, src/styles/scss/style.scss */
+  .container {
+    display: grid;
+    grid-gap: 3rem; }
+    /* line 14, src/styles/scss/style.scss */
+    .container app-gauge {
+      transform: scale(2.5);
+      display: none; }
+      /* line 18, src/styles/scss/style.scss */
+      .container app-gauge:first-of-type {
+        display: initial; }
+    /* line 23, src/styles/scss/style.scss */
+    .container .hide {
+      display: none !important; }
+    /* line 27, src/styles/scss/style.scss */
+    .container .show {
+      display: initial !important; }
+  /* line 32, src/styles/scss/style.scss */
+  .swipe {
+    position: absolute;
+    transform: translateY(21vh);
+    font-size: 3rem;
+    opacity: .3;
+    font-style: italic; } }
+
+@media (min-width: 1200px) {
+  /* line 42, src/styles/scss/style.scss */
+  .container {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    grid-gap: 3rem; }
+  /* line 47, src/styles/scss/style.scss */
+  .swipe {
+    display: none; } }
